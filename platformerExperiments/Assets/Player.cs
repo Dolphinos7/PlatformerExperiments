@@ -17,5 +17,7 @@ public class Player : MonoBehaviour {
 
         //move the player left/right - vertical is not used
         transform.Translate(new Vector3(axisX, 0) * Time.deltaTime * speed);
+
+        
 	}   
 }

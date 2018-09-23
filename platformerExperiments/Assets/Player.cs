@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
     private float speed;
 	// Use this for initialization
 	void Start () {
-        speed = 3;
+        speed = 8;
 	}
 	
 	// Update is called once per frame

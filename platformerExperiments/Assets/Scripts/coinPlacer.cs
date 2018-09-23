@@ -15,7 +15,7 @@ public class coinPlacer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        theta = (GameObject.Find("longPlatform").transform.rotation.z * (Mathf.PI/180f) * 120);
+        theta = (GameObject.Find("longPlatform").transform.rotation.z * (Mathf.PI/180f) * 120f);
         spawnCoinLeft();
         spawnCoinRight();
     }

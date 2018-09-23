@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 251313023}
   - component: {fileID: 251313022}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: coinManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

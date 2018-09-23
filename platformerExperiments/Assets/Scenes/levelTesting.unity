@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 227690871}
   - component: {fileID: 227690872}
   - component: {fileID: 227690873}
+  - component: {fileID: 227690874}
   m_Layer: 0
   m_Name: testSprite
   m_TagString: Player
@@ -247,6 +248,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &227690874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227690868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b2a10d08c723b499fecd6c4002594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &251313019
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +268,8 @@ GameObject:
   m_Component:
   - component: {fileID: 251313021}
   - component: {fileID: 251313020}
+  - component: {fileID: 251313023}
+  - component: {fileID: 251313022}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -287,6 +301,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251313022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251313019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a1bc33ea742a0438666a7f93a104f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &251313023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251313019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5214910c650e99c469781f701976b728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 1781091247847184, guid: 9fba5701c7fea1b4d92535b97f7f8477, type: 2}
+  floor: {fileID: 1084254043}
 --- !u!1 &697478573
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +414,7 @@ GameObject:
   - component: {fileID: 1084254046}
   - component: {fileID: 1084254047}
   m_Layer: 0
-  m_Name: testPlatform
+  m_Name: longPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,7 +473,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1084254043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.038, y: -0.852, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 3, y: 0.05, z: 0}
   m_Children: []
   m_Father: {fileID: 0}

@@ -35,7 +35,10 @@ public class coinPlacer : MonoBehaviour {
         var newCoin = Instantiate(coin, whereToPlace, GameObject.Find("longPlatform").transform.rotation);
         newCoin.transform.parent = floor.transform;
     }
-
+    void killItWithFire()
+    {
+        
+    }
 
         
 

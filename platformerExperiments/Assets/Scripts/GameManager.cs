@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour {
         {
             gameOver();
         }
-        Debug.Log(getPlayerPositionY());
 	}
     /**
      * Returns the current value of the player-character's Y position
@@ -30,7 +29,6 @@ public class GameManager : MonoBehaviour {
      */
      public void gameOver()
     {
-        Debug.Log("Game Over!");
         SceneManager.LoadScene("levelTesting");
     }
 }

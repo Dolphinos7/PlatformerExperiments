@@ -5,19 +5,40 @@ using UnityEngine;
 public class coinPlacer : MonoBehaviour {
     public GameObject coin;
     public GameObject floor;
+    bool spawnSide = false;
     float theta = 0f;
     float xpos = 0f;
 
     // Use this for initialization
-    void Start () {
-        
-    }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        theta = (GameObject.Find("longPlatform").transform.rotation.z * (Mathf.PI/180f) * 120f);
+    void Start() {
         spawnCoinLeft();
         spawnCoinRight();
+    }
+
+    // Update is called once per frame
+    void FixedUpdate() {
+        theta = (GameObject.Find("longPlatform").transform.rotation.z * (Mathf.PI / 180f) * 120f);
+
+    }
+    public void spawnCoin()
+    {
+        if (spawnSide == false)
+        {
+            spawnSide = true;
+            FindObjectOfType<coinPlacer>().spawnCoinLeft();
+        }
+        if (spawnSide == true)
+        {
+            spawnSide = false;
+            FindObjectOfType<coinPlacer>().spawnCoinRight();
+        }
+    }
+    void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    {
+        if (collision.gameObject.tag == "coin")
+        {
+            
+        }
     }
 
     void spawnCoinLeft()

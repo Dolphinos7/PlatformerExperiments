@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 251313022}
   m_Layer: 0
   m_Name: coinManager
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 1084254047}
   m_Layer: 0
   m_Name: longPlatform
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

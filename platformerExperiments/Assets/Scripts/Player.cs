@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     private float speed;
-	// Use this for initialization
-	void Start () {
+
+    void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    {
+        if (collision.gameObject.tag == "coin")
+        {
+            FindObjectOfType<coinPlacer>().spawnCoin();
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         speed = 8;
 	}
 	
@@ -20,4 +29,5 @@ public class Player : MonoBehaviour {
 
         
 	}   
+
 }

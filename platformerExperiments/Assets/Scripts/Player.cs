@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     private float speed;
+    bool canHitLeft = true;
+    bool canHitRight = false;
 
     void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (collision.gameObject.tag == "coin")
+        if (collision.gameObject.name == "leftCoin"&& canHitLeft == true)
         {
-            FindObjectOfType<coinPlacer>().spawnCoin();
+            Debug.Log("hitleftcoin");
+            canHitLeft = false;
+            FindObjectOfType<coinPlacer>().spawnCoinL();
+            canHitRight = true;
+        }
+        if(collision.gameObject.name == "rightCoin"&&canHitRight == true)
+        {
+            Debug.Log("hitrightcoin");
+            canHitRight = false;
+            FindObjectOfType<coinPlacer>().spawnCoinR();
+            canHitLeft = true;
+            
         }
     }
 

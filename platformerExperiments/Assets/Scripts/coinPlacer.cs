@@ -5,14 +5,16 @@ using UnityEngine;
 public class coinPlacer : MonoBehaviour {
     public GameObject coin;
     public GameObject floor;
-    bool spawnSide = false;
+    bool spawnSide = true;
     float theta = 0f;
     float xpos = 0f;
+    GameObject newCoinL;
+    GameObject newCoinR;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         spawnCoinLeft();
-        spawnCoinRight();
     }
 
     // Update is called once per frame
@@ -20,48 +22,38 @@ public class coinPlacer : MonoBehaviour {
         theta = (GameObject.Find("longPlatform").transform.rotation.z * (Mathf.PI / 180f) * 120f);
 
     }
-    public void spawnCoin()
+    public void spawnCoinR()
     {
-        if (spawnSide == false)
-        {
-            spawnSide = true;
-            FindObjectOfType<coinPlacer>().spawnCoinLeft();
-        }
-        if (spawnSide == true)
-        {
-            spawnSide = false;
-            FindObjectOfType<coinPlacer>().spawnCoinRight();
-        }
+        Destroy(newCoinR);
+        spawnCoinLeft();
     }
-    void OnCollisionEnter2D(UnityEngine.Collision2D collision)
-    {
-        if (collision.gameObject.tag == "coin")
-        {
-            
+    public void spawnCoinL()
+        { 
+            Destroy(newCoinL);
+            spawnCoinRight();
         }
-    }
+
 
     void spawnCoinLeft()
     {
         xpos = Random.Range(-7.5f, -4f);
         Vector3 whereToPlace = new Vector3((xpos * Mathf.Cos(theta)), (xpos * Mathf.Sin(theta))-.5f, (xpos * Mathf.Sin(theta)));
-        var newCoin = Instantiate(coin, whereToPlace, GameObject.Find("longPlatform").transform.rotation);
-        newCoin.transform.parent = floor.transform;
+        newCoinL = Instantiate(coin, whereToPlace, GameObject.Find("longPlatform").transform.rotation);
+        newCoinL.transform.parent = floor.transform;
+        newCoinL.name = "leftCoin";
     }
 
     void spawnCoinRight()
     {
         xpos = Random.Range(4f, 7.5f);
         Vector3 whereToPlace = new Vector3((xpos * Mathf.Cos(theta)), (xpos * Mathf.Sin(theta)) - .5f, (xpos * Mathf.Sin(theta)));
-        var newCoin = Instantiate(coin, whereToPlace, GameObject.Find("longPlatform").transform.rotation);
-        newCoin.transform.parent = floor.transform;
+        newCoinR = Instantiate(coin, whereToPlace, GameObject.Find("longPlatform").transform.rotation);
+        newCoinR.transform.parent = floor.transform;
+        newCoinR.name = "rightCoin";
     }
     void killItWithFire()
     {
         
     }
-
-        
-
 }
  

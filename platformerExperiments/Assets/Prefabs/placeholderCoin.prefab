@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4704462296292920}
   - component: {fileID: 212013620954389446}
   - component: {fileID: 61115165982912540}
+  - component: {fileID: 50736591849719132}
   m_Layer: 0
   m_Name: placeholderCoin
   m_TagString: coin
@@ -41,6 +42,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50736591849719132
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781091247847184}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61115165982912540
 BoxCollider2D:
   m_ObjectHideFlags: 1
